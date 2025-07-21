@@ -30,6 +30,12 @@ body {
   flex-wrap: wrap;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 #header figure {
   margin: 0;
 }
@@ -42,7 +48,6 @@ body {
 #header h1 {
   color: white;
   margin-left: 15px;
-  flex-grow: 1;
   font-size: 1.8rem;
 }
 
@@ -75,7 +80,9 @@ main {
   padding: 40px 20px;
   border-radius: 8px;
   box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  margin-top: 30px;
   margin-bottom: 50px;
+  scroll-margin-top: 50px;
 }
 
 #Features h2 {
@@ -204,23 +211,59 @@ form input[type="submit"]:hover {
   background-color: #1565c0;
 }
 
+/* Responsive */
 @media (max-width: 700px) {
   #header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   #header h1 {
-    margin: 10px 0;
+    margin: 0;
+    font-size: 1.5rem;
   }
 
   #nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
     width: 100%;
-    justify-content: space-around;
-    margin-top: 10px;
   }
 
-  #Features, #How_It_Works, #Pricing, form {
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 0.95rem;
+  }  
+  
+  #Features {
+    margin: 60px 15px 30px;
+    padding: 10px 15px 25px;
+    scroll-margin-top: 50px;
+  }
+
+  #iframe, iframe, #video {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  #How_It_Works, #Pricing {
+    scroll-margin-top: 50px;
+  }
+
+  #How_It_Works, #Pricing, form {
     margin: 30px 15px;
     padding: 25px 15px;
   }
@@ -233,3 +276,4 @@ form input[type="submit"]:hover {
     height: 200px !important;
   }
 }
+
